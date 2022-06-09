@@ -1,0 +1,280 @@
+/* Import fonts */
+@font-face {
+    font-family: 'balooregular';
+    src: url('fonts/baloo_regular/Baloo-Regular-webfont.eot');
+    src: url('fonts/baloo_regular/Baloo-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/baloo_regular/Baloo-Regular-webfont.woff') format('woff'),
+         url('fonts/baloo_regular/Baloo-Regular-webfont.ttf') format('truetype'),
+         url('fonts/baloo_regular/Baloo-Regular-webfont.svg#balooregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'caviar_dreamsregular';
+    src: url('fonts/caviardreams_regular/CaviarDreams-webfont.eot');
+    src: url('fonts/caviardreams_regular/CaviarDreams-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/caviardreams_regular/CaviarDreams-webfont.woff') format('woff'),
+         url('fonts/caviardreams_regular/CaviarDreams-webfont.ttf') format('truetype'),
+         url('fonts/caviardreams_regular/CaviarDreams-webfont.svg#caviar_dreamsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'hattori_hanzolight';
+    src: url('fonts/hattorihanzo_light/Hattori_Hanzo-webfont.eot');
+    src: url('fonts/hattorihanzo_light/Hattori_Hanzo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/hattorihanzo_light/Hattori_Hanzo-webfont.woff') format('woff'),
+         url('fonts/hattorihanzo_light/Hattori_Hanzo-webfont.ttf') format('truetype'),
+         url('fonts/hattorihanzo_light/Hattori_Hanzo-webfont.svg#hattori_hanzolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*General page properties*/
+body 
+{
+    font-family: 'hattori_hanzolight', Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    text-align: justify;
+    /*background-color: rgba(65, 105, 255, 0.5);*/
+    background-color: rgba(119,136,153, 1);
+    
+}
+
+#page_wrapper
+{
+    width:98%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#header_wrapper
+{
+    line-height: 1em;
+    position: relative;
+}
+
+#content_wrapper
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 20px 0px 0px 0px;
+    box-shadow: -5px -5px 5px rgba(65, 105, 255, 0.75);
+}
+
+#header_wrapper h1
+{
+    color: black;
+}
+
+/*Drop-down menu*/
+.dropdown-menu 
+{
+    position: absolute;
+    top: 20%;
+    right: 0px;
+    z-index: 1;
+    list-style: none;
+    font-family: 'balooregular', Arial, Helvetica, sans-serif;
+    width: 20%;
+    height: 60%;
+   
+}
+
+summary 
+{
+    list-style: none;
+    width: 90%;
+    height: 100%; 
+    margin: 0px;
+    padding: 0px;
+}
+
+#avatar
+{
+    display: inline-block;
+    height: 100% !important;
+    width: auto;
+    margin-right: auto;
+    object-fit: cover;
+    border-radius: 60%;
+}
+
+details summary::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjM0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIzNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC41OSAxNi4zNGw0LjU4LTQuNTktNC41OC00LjU5TDEwIDUuNzVsNiA2LTYgNnoiLz48L3N2Zz4=")
+    no-repeat 50% 50% / 1em 1em;
+    width: 1.5em;
+    height: 1.5em;
+    
+  }
+
+details[open] > summary::after 
+{
+    transform: rotate(90deg); 
+}
+
+  /* ????
+summary ::-webkit-details-marker {
+    display: none;
+}*/
+
+.dropdown-menu > ul
+{
+    list-style-position: outside;
+    list-style-type: none;
+    padding:0px;
+}
+
+h1
+{
+    font-size: 2em;
+    font-family: 'caviar_dreamsregular', Arial, Helvetica, sans-serif;
+    text-align: center;
+    color:rgba(0,0,0,1);
+    
+}
+
+h2
+{
+    font-size: 2em;
+    font-family: 'caviar_dreamsregular', Arial, Helvetica, sans-serif;
+    color:rgba(112,128,144,1);
+}
+
+h3
+{
+    font-size: 1.5em;
+}
+
+li
+{
+    padding: 5px;
+}
+
+input:focus
+{
+    color :grey;
+}
+
+aside
+{
+    width: 18%;
+    height: 25%;
+    border-radius: 20px;
+    background-color: white;
+}
+
+#profile_photo
+{
+    width:100%;
+    margin-top: 20%;
+}
+
+
+
+section
+{
+    width: 80%;
+}
+
+/*lists and items style*/
+.list_content ul {
+    list-style: none;
+    list-style-position: outside;
+}
+
+.element_header
+{
+    display: flex;
+    align-items: center;
+}
+
+li .element_header
+{
+    align-items: flex-start;
+}
+
+.button_block
+{
+    padding-left:10%;
+    width:fit-content;
+}
+
+button
+{
+    background-color:  rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    border: solid 1px white;
+    height: 1.5em;
+}
+
+button img 
+{
+    height: 100%;
+}
+
+/*myProfile styles*/
+#creation
+{
+    display : flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: space-between;
+    width: 100%;
+}
+
+.creation_field
+{
+    display:table-row;
+    width: 100%;
+}
+
+
+label
+{
+    display: table-cell;
+    text-align: right;
+}
+
+input
+{
+    display: table-cell;
+    margin-bottom: 10px;
+}
+
+input[type="submit"]
+{
+    margin: 1%;
+}
+
+#modify_profile, #modify_password {
+    background-color: rgba(112,128,144,1);
+    border : rgba(0,0,0,1) solid 1px;
+    margin-left: 1%;
+}
+
+#creation .element_header
+{
+    width: 100%;
+}
+
+/*Connection window styles*/
+#connection, #connection_page
+{
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+    width: 100%;
+}

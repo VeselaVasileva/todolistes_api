@@ -1,0 +1,15 @@
+#bloc2
+{
+    background-color:pink;
+    display: flex;
+}
+#bloc3
+{
+    background-color: blueviolet;
+}
+
+.dropdown-menu
+{
+    position: absolute;
+    z-index: 10;
+}
