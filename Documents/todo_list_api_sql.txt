@@ -1,0 +1,48 @@
+CREATE DATABASE todolists;
+USE todolists
+CREATE TABLE users 
+	(id INT NOT NULL AUTO_INCREMENT,
+	 name VARCHAR(100),
+	 firstname VARCHAR(100),
+	 email VARCHAR(255) UNIQUE,
+	 password MEDIUMTEXT,
+	 createdAt DATETIME,
+	 deleted BOOLEAN,
+	 deletedAt DATETIME,
+	 avatar VARCHAR(255),
+	 PRIMARY KEY(id));
+
+	 
+CREATE TABLE lists
+	(id INT NOT NULL AUTO_INCREMENT,
+	 title VARCHAR(255),
+	 createdAt DATETIME,
+	 createdBy INT,
+	 deleted BOOLEAN,
+	 deletedAt DATETIME,
+	 PRIMARY KEY(id));
+
+CREATE TABLE tasks
+	(id INT NOT NULL AUTO_INCREMENT,
+	 content TEXT,
+	 createdAt DATETIME,
+	 deleted BOOLEAN,
+	 deletedAt DATETIME,
+	 done BOOLEAN,
+	 doneAt DATETIME,
+	 position INT(4),
+	 parentId INT,
+	 listId INT,
+	 PRIMARY KEY(id),
+	 FOREIGN KEY(listId) REFERENCES lists(id));
+
+CREATE TABLE users_lists
+	(id INT NOT NULL AUTO_INCREMENT,
+	 userId INT,
+	 listId INT,
+	 position INT(4),
+	 PRIMARY KEY(id),
+	 FOREIGN KEY(userId) REFERENCES users(id),
+	 FOREIGN KEY (listId) REFERENCES lists(id));
+	 
+	 

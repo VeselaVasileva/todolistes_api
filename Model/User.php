@@ -3,51 +3,55 @@
 
     class User
     {
-        //object|resource|array|string|int|float|bool|null
         /**
-         * 
+         * table's name in database
+         */
+        private string $table = 'users';
+
+        /**
+         * ID
          */
         private string $id;
 
         /**
-         * 
+         * User's name 
          */
-        private string $nom;
+        private string $name;
 
 		/**
-         * 
+         * User's firstname
          */
-        private string $prenom;
+        private string $firstname;
 		
 		/**
-         * 
+         * User's email
          */
         private string $email;
 		
 		/**
-         * 
+         * User's password
          */
         private string $password;
 		
         /**
-         * 
+         * User's profile photo
          */
-        private string $profilePhoto;
+        private string $avatar;
 
         /**
-         * 
+         * User created at date
          */
         private string $createdAt;
 
-        /**
-         * 
+         /**
+         * User is deleted ?
          */
-        private string $deletedAt;
+        private boolean $deleted;
 
         /**
-         * 
+         * User deleted at date
          */
-        private boolean $deleted;        
+        private string $deletedAt;      
     }
 
 ?>
