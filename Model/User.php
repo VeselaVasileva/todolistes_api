@@ -6,7 +6,7 @@
         /**
          * table's name in database
          */
-        private string $table = 'users';
+        public static string $table = 'users';
 
         /**
          * ID
@@ -46,7 +46,7 @@
          /**
          * User is deleted ?
          */
-        private boolean $deleted;
+        private bool $deleted;
 
         /**
          * User deleted at date
